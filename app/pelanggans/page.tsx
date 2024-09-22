@@ -4,6 +4,8 @@ import DeletePelanggan from "./deletePelanggan"
 import UpdatePelanggan from "./updatePelanggan"
 const prisma = new PrismaClient()
 
+export const dynamic = "force-dynamic";
+
 const getPelanggans = async () => {
     const res = await prisma.pelanggan.findMany({
         select:{
